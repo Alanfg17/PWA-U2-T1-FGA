@@ -25,13 +25,13 @@ self.addEventListener('install',(event) =>{
     const promesaCache = caches.open(CACHE_NAME)
         .then(cache => {
             return cache.addAll([
-                '/',
-                'index.html',
-                'images/noticia1.png',
-                'images/noticia2.png',
-                'images/noticia3.png',
-                'images/noticia4.png',
-                'js/app.js'
+                'PWA-U2-T1-FGA/',
+                'PWA-U2-T1-FGA/index.html',
+                'PWA-U2-T1-FGA/images/noticia1.png',
+                'PWA-U2-T1-FGA/images/noticia2.png',
+                'PWA-U2-T1-FGA/images/noticia3.png',
+                'PWA-U2-T1-FGA/images/noticia4.png',
+                'PWA-U2-T1-FGA/js/app.js'
             ])
         })
 

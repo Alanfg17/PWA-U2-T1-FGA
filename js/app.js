@@ -21,5 +21,5 @@ $('.btn-regresar').on('click', function() {
 });
 
 if (navigator.serviceWorker) {
-       navigator.serviceWorker.register('../sw.js')
+       navigator.serviceWorker.register('../PWA-U2-T1-FGA/sw.js')
 }

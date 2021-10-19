@@ -1,7 +1,6 @@
-const CACHE_NAME = 'cache-v1'
-
 console.log('SW: Limpio');
 const CACHE_STATIC_NAME = 'static-v1'
+const CACHE_NAME = 'cache-v1'
 const DYMAMIC_CACHE_NAME = 'dynamic-v1'
 const CACHE_INMUTABLE_NAME = 'inmutable-v1'
 
@@ -10,7 +9,7 @@ function cleanCache(cacheName,sizeItems) {
         .then(cache =>{
             cache.keys().then(keys =>{
                 console.log(keys)
-                if (keys.length >= sizeItems) {
+                if (keys.length > sizeItems) {
                     cache.delete(keys[0].then(()=>{
                         cleanCache(cacheName,sizeItems)
                     }))
@@ -25,13 +24,13 @@ self.addEventListener('install',(event) =>{
     const promesaCache = caches.open(CACHE_NAME)
         .then(cache => {
             return cache.addAll([
-                'PWA-U2-T1-FGA/',
-                'PWA-U2-T1-FGA/index.html',
-                'PWA-U2-T1-FGA/images/noticia1.png',
-                'PWA-U2-T1-FGA/images/noticia2.png',
-                'PWA-U2-T1-FGA/images/noticia3.png',
-                'PWA-U2-T1-FGA/images/noticia4.png',
-                'PWA-U2-T1-FGA/js/app.js'
+                '/PWA-U2-T1-FGA/',
+                '/PWA-U2-T1-FGA/index.html',
+                '/PWA-U2-T1-FGA/images/noticia1.png',
+                '/PWA-U2-T1-FGA/images/noticia2.png',
+                '/PWA-U2-T1-FGA/images/noticia3.png',
+                '/PWA-U2-T1-FGA/images/noticia4.png',
+                '/PWA-U2-T1-FGA/js/app.js'
             ])
         })
 
